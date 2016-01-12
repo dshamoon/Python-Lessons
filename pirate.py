@@ -14,39 +14,94 @@ ingredients = {
     "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"],
 }
-p1 = (random.choice(ingredients['strong']))
-p2 = (random.choice(ingredients['salty']))
-p3 = (random.choice(ingredients['bitter']))
-p4 = (random.choice(ingredients['sweet']))
-p5 = (random.choice(ingredients['fruity']))
 
-print "Answer Y or N"
-print questions['strong']
-a1  = raw_input()
-print questions['salty']
-a2  = raw_input()
-print questions['bitter']
-a3  = raw_input()
-print questions['sweet']
-a4  = raw_input()
-print questions['fruity']
-a5  = raw_input()
+stuff = {
+    'salty': True,
+    'strong': True,
+    'bitter': True,
+    'fruity': True,
+    'sweet': True
+}  
+#for question in questions:
 
 
-if a1 == "Y":
-    print p1
+def pleasure():
+    answersdictionry = {}
+    print "choose Y or N"
+    for question in questions:
+        print questions[question] 
+        answer = raw_input()    
+        if answer == "Y" or "y":
+            answersdictionry[question] = True
+        else: 
+            answersdictionry[question] = False
+    return answersdictionry
 
-if a2 == "Y":
-    print p2
+def hope():
+    beverage = []
+    for v in ingredients.values():
+        beverage.append(random.choice(ingredients[v]))
+    print beverage #random.choice(ingredients[v])
+print hope()
 
-if a3 == "Y":
-    print p3
+# def drink():
+#     beverage = []
+#     for v in stuff.values():
+#         #for key, value in value.items():
+#         if stuff.values() is True:
+#             beverage.append(" something ")
+#     return beverage
+#print drink()
+    
 
-if a4 == "Y":
-    print p4
 
-if a5 == "Y":
-    print p5
+#
+# {'salty': False, 'strong': True, 'bitter': True, 'fruity': True, 'sweet': True}    
+
+# # def what_yourpleasure():
+# #     yourpleasure = {}
+# #     for answer questions[]
+# #     raw_input()
+    
+    
+    
+# # ##########
+
+# # def mix_thedrink(yourpleasure):
+
+# p1 = (random.choice(ingredients['strong']))
+# p2 = (random.choice(ingredients['salty']))
+# p3 = (random.choice(ingredients['bitter']))
+# p4 = (random.choice(ingredients['sweet']))
+# p5 = (random.choice(ingredients['fruity']))
+
+# print "Answer Y or N"
+# print questions['strong']
+# a1  = raw_input()
+# print questions['salty']
+# a2  = raw_input()
+# print questions['bitter']
+# a3  = raw_input()
+# print questions['sweet']
+# a4  = raw_input()
+# print questions['fruity']
+# a5  = raw_input()
+
+
+# if a1 == "Y":
+#     print p1
+
+# if a2 == "Y":
+#     print p2
+
+# if a3 == "Y":
+#     print p3
+
+# if a4 == "Y":
+#     print p4
+
+# if a5 == "Y":
+#     print p5
 
     
      
